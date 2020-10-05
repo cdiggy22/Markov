@@ -23,7 +23,7 @@ function makeText(path) {
       })
 }
 
-async function readUrl (url) {
+async function readUrl(url) {
     let resp;
 
     try {
@@ -32,6 +32,7 @@ async function readUrl (url) {
         console.log("ERROR:", err);
         process.kill(1)
     }
+    makeMachine(resp.data);
 }
 
 
